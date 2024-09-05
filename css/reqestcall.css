@@ -1,0 +1,86 @@
+.callreqest {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  width: 95%; /* Ensure the container takes up the full width without overflowing */
+  max-width: 100vw; /* Prevent overflow */
+  height: 40vh;
+  margin-left: 50px;
+  background-color: aliceblue;
+  padding: 0 20px; /* Optional padding */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.left-call {
+  margin-top: 100px;
+  width: 50%;
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-call h1,
+.left-call p {
+  text-align: center;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.right-call {
+  width: 50%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40vh;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%; /* Ensure the form takes up the full width of its container */
+  max-width: 600px; /* Limit the width of the form */
+  margin: 0 auto;
+  justify-content: center;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="number"]::placeholder {
+  color: #999;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+input[type="submit"] {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}

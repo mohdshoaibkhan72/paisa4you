@@ -34,6 +34,8 @@
     <link rel="stylesheet" href="css/vision.css" />
     <link rel="stylesheet" href="css/clinets.css" />
     <link rel="stylesheet" href="css/reqestcall.css" />
+    <link rel="stylesheet" href="css/gallry.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -548,7 +550,7 @@
             <div
               class="col-lg-4 col-sm-6"
               data-aos="fade-up"
-              data-aos-delay="100"
+              data-aos-delay="200"
             >
               <div class="item">
                 <span class="icon feature_box_col_two">
@@ -721,82 +723,86 @@
 
     <!--Request a call back function  Start-->
     <section>
-      <div class="container-xxl p-1" id="SignUp">
-        <div class="container p-0 mb-2">
-          <div class="bg-light rounded">
-            <div class="row g-0">
-              <div class="col-lg-6">
-                <div class="form-container">
-                  <h1 class="form-title">Request a Call</h1>
-                  <form>
-                    <div class="form-group">
-                      <!-- Name Field -->
-                      <div class="input-container">
-                        <label for="gname">Name</label>
-                        <input type="text" id="gname" placeholder="Name" />
-                      </div>
-
-                      <!-- Email Field -->
-                      <div class="input-container">
-                        <label for="gmail">Email</label>
-                        <input type="email" id="gmail" placeholder="Email" />
-                      </div>
-
-                      <!-- Phone Number Field -->
-                      <div class="input-container">
-                        <label for="phone">Phone Number</label>
-                        <input
-                          type="text"
-                          id="phone"
-                          placeholder="Phone Number"
-                        />
-                      </div>
-
-                      <!-- Loan Type Dropdown -->
-                      <div class="input-container">
-                        <label for="course">Select a Loan Type</label>
-                        <select id="course">
-                          <option selected>Select</option>
-                          <option value="1">Overdraft</option>
-                          <option value="2">Business Loan</option>
-                          <option value="3">Personal Loan</option>
-                          <option value="4">Home Loan</option>
-                          <option value="5">Other</option>
-                        </select>
-                      </div>
-
-                      <!-- Submit Button -->
-                      <div class="input-container">
-                        <button class="submit-btn" type="submit">
-                          Sign-up
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-
-              <!-- Image or Additional Content Area -->
-              <div class="col-lg-6">
-                <div class="info-container">
-                  <h1>Request A Call Back</h1>
-                  <p>
-                    If you are looking for a loan and want it to be a
-                    stress-free process, get the best assistance from our team.
-                    Contact us.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="callreqest">
+        <div class="left-call" data-aos="fade-right">
+          <h1>Request A Call Back</h1>
+          <p>
+            If you are looking for a loan and want it to be a stress-free
+            process, then get the best assistance from our team.
+          </p>
+        </div>
+        <div class="right-call" data-aos="fade-left">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input
+              type="hidden"
+              name="access_key"
+              value="a723f59c-d1be-44a1-b942-a27a15c862c6"
+            />
+            <input type="text" name="name" placeholder="Enter your name" />
+            <input type="email" name="email" placeholder="Enter your email" />
+            <input type="text" name="interestIn" placeholder="Interested in" />
+            <input
+              type="number"
+              name="number"
+              placeholder="Enter your phone number"
+            />
+            <button type="submit" class="btn btn-primary">Submit Form</button>
+          </form>
         </div>
       </div>
     </section>
-    <!--Request a call back function end -->
 
+    <!--Request a call back function end -->
+    <!-- Gallry Start -->
+    <section class="gallery">
+      <h1>Our Gallery</h1>
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="/Images/img1.jpg" alt="Image 1" />
+          </div>
+          <div class="slide">
+            <img src="/Images/img2.jpg" alt="Image 2" />
+          </div>
+          <div class="slide">
+            <img src="/Images/img3.jpg" alt="Image 3" />
+          </div>
+          <div class="slide">
+            <img src="/Images/img4.jpg" alt="Image 4" />
+          </div>
+          <div class="slide">
+            <img src="/Images/img5.jpg" alt="Image 5" />
+          </div>
+          <div class="slide">
+            <img src="/Images/img6.jpg" alt="Image 5" />
+          </div>
+          <div class="slide">
+            <img src="/Images/img7.jpg" alt="Image 5" />
+          </div>
+          <div class="slide">
+            <img src="/Images/img8.jpg" alt="Image 5" />
+          </div>
+          <!-- Add more slides as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallry end -->
+
+    <!--FOOTER START-->
+
+    <!--fOOTER END-->
+    <section class="footer">
+      <div class="footer">
+        <div class="left-foter"></div>
+        <div class="right-foter"></div>
+      </div>
+    </section>
     <!-- Bootstrap JS and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="/js/gallry.js"></script>
     <script>
       AOS.init();
     </script>
