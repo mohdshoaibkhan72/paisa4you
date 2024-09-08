@@ -3,6 +3,9 @@
   border-bottom: 1px solid black;
 }
 
+body {
+  overflow-x: hidden;
+}
 .navbar-brand img {
   width: 12rem;
 }
