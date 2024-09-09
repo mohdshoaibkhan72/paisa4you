@@ -9,13 +9,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="/css/popup.css">
   </head>
   <body>
-    <!-- Navbar start -->
-    <section class="navbar1">
+     <!-- Navbar start -->
+     <section class="navbar1">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img
               src="/Images/png logo.png"
               alt="company logo"
@@ -41,12 +44,7 @@
           >
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="/index.html"
-                  >Home</a
-                >
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Loan</a>
@@ -61,7 +59,7 @@
                 <a class="nav-link" id="btnOpenForm" href="#">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="/services.html">Services</a>
               </li>
             </ul>
             <button type="button" class="btn btn-primary ms-lg-3 mt-3 mt-lg-0">
@@ -71,7 +69,132 @@
         </div>
       </nav>
     </section>
-    <h1>Home > about</h1>
+
     <!-- Navbar end -->
+
+    <!-- Contact form popup -->
+    <div class="form-popup-bg">
+      <div class="form-container">
+        <button id="btnCloseForm" class="close-button">X</button>
+        <h1>Contact Us</h1>
+        <p>For more information, please complete this form.</p>
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail Address</label>
+            <input type="email" id="email" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" class="form-control" />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="about-container">
+      <section class="about-section">
+        <h1>About Paisa4You</h1>
+        <p>
+          Welcome to Paisa4You, a trusted financial services provider dedicated
+          to helping individuals and businesses achieve their financial goals.
+          With a wide range of loan options including personal loans, home
+          loans, and business loans, we strive to offer solutions that are
+          tailored to your specific needs.
+        </p>
+        <p>
+          Our mission is to make financial services accessible, transparent, and
+          easy to understand for everyone. We believe in empowering our
+          customers with the right information and guidance to make informed
+          financial decisions.
+        </p>
+        <p>
+          At Paisa4You, we are committed to delivering outstanding customer
+          service and ensuring a seamless experience from application to
+          approval. Whether you're looking to fund a new venture or manage
+          personal finances, we are here to support you every step of the way.
+        </p>
+      </section>
+
+      <section class="team-section">
+        <h2>Our Team</h2>
+        <div class="team-members">
+          <div class="team-member">
+            <img src="/Images/img1.jpg" alt="Team Member 1" />
+            <h3>John Doe</h3>
+            <p>Founder & CEO</p>
+          </div>
+          <div class="team-member">
+            <img src="/Images/img2.jpg" alt="Team Member 2" />
+            <h3>Jane Smith</h3>
+            <p>Chief Financial Officer</p>
+          </div>
+          <div class="team-member">
+            <img src="/Images/img3.jpg" alt="Team Member 3" />
+            <h3>Alex Johnson</h3>
+            <p>Head of Operations</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--footer start-->
+    <section class="foot">
+      <footer>
+        <div class="container footer-container">
+            <div class="col-3">
+                <img src="/Images/png logo.png" alt="">
+                <br>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></i></a>
+
+                </div>
+                <br>
+                <span class="address">Address:B-14/15 First Floor F05,Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301
+                </span>
+            </div>
+            <div class="col-3">
+                <h6>About</h6>
+                <p>
+                  Paisa4You provides personalized financial solutions, including loans for individuals and businesses. We focus on trust, flexibility, and customer satisfaction, ensuring a smooth financing experience.
+                    <br>
+                    <br>
+                    Our expert team is committed to delivering personalized services for a smooth and hassle-free experience.
+                </p>
+            </div>
+            <div class="col-3">
+                <h6>Get Help</h6>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i>7017249349</a>
+
+            </div>
+            <div class="col-3">
+                <h6>Contact</h6>
+                <a href="#">Paisa4You@gmail.com</a>
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &#169; 2024 | Paisa4You 
+        </div>
+    </footer>
+    
+
+
+
+    </section>
+    <!--footer end-->
   </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/popup.js"></script>
+
 </html>
