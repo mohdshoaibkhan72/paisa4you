@@ -1,0 +1,34 @@
+body {
+  background-color: aliceblue;
+}
+
+.form-section {
+  display: none;
+}
+
+.form-section.active {
+  display: block;
+}
+
+.apply-lone {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .apply-lone {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .apply-lone {
+    width: 50%;
+  }
+}
+
+.invalid-feedback {
+  display: block;
+}

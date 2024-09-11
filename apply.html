@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Loan Application Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/applylone.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Loan Form Section Start -->
+    <section class="apply-lone">
+      <div class="container mt-5">
+        <h2 class="text-center mb-4">Loan Application Form</h2>
+        <form id="loanForm" novalidate>
+          <!-- Step 1 -->
+          <div class="form-section active" id="step1">
+            <div class="mb-3">
+              <label for="name" class="form-label">Full Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="mobile" class="form-label">Mobile Number</label>
+              <input
+                type="tel"
+                class="form-control"
+                id="mobile"
+                placeholder="Enter your mobile number"
+                pattern="^\d{10}$"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="form-section" id="step2">
+            <div class="mb-3">
+              <label for="loanAmount" class="form-label">Loan Amount</label>
+              <input
+                type="number"
+                class="form-control"
+                id="loanAmount"
+                placeholder="Enter loan amount"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="loanPurpose" class="form-label"
+                >Purpose of Loan</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="loanPurpose"
+                placeholder="Enter purpose of the loan"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <div class="d-flex justify-content-between mt-4">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="prevBtn"
+              disabled
+            >
+              Previous
+            </button>
+            <button type="button" class="btn btn-primary" id="nextBtn">
+              Next
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Loan Form Section End -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/applylone.js"></script>
+  </body>
+</html>
