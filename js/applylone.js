@@ -43,3 +43,13 @@ function validateForm(section) {
 
   return valid;
 }
+
+function updateButtons() {
+  document.getElementById("prevBtn").disabled = currentStep === 1;
+  document.getElementById("nextBtn").innerText =
+    currentStep === totalSteps ? "Submit" : "Next";
+  // Show submit button on the final step
+  document
+    .getElementById("submitBtn")
+    .classList.toggle("d-none", currentStep < totalSteps);
+}

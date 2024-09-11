@@ -10,95 +10,265 @@
     />
     <link rel="stylesheet" href="css/applylone.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/popup.css" />
+    <link rel="stylesheet" href="css/footer.css">
   </head>
   <body>
+    <!-- Navbar start -->
+    <section class="navbar1">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="/Images/png logo.png"
+              alt="company logo"
+              class="img-fluid"
+            />
+          </a>
+          <button
+            data-aos="fade-left"
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+            data-aos="fade-left"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Loan
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Personal Loan</a></li>
+                  <li><a class="dropdown-item" href="#">Home Loan</a></li>
+                  <li><a class="dropdown-item" href="#">Business Loan</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Overdraft Facility</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Our Staff</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="btnOpenForm" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services.html">Services</a>
+              </li>
+            </ul>
+            <a href="/apply.html">
+              <button
+                type="button"
+                class="btn btn-primary ms-lg-3 mt-3 mt-lg-0"
+              >
+                APPLY NOW
+              </button></a
+            >
+          </div>
+        </div>
+      </nav>
+    </section>
+    <!-- Navbar end -->
+
+    <!-- Contact form popup start -->
+    <div class="form-popup-bg">
+      <div class="form-container">
+        <button id="btnCloseForm" class="close-button">X</button>
+        <h1>Contact Us</h1>
+        <p>For more information, please complete this form.</p>
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail Address</label>
+            <input type="email" id="email" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" class="form-control" />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!--contact form popip end -->
+
     <!-- Loan Form Section Start -->
     <section class="apply-lone">
       <div class="container mt-5">
         <h2 class="text-center mb-4">Loan Application Form</h2>
-        <form id="loanForm" novalidate>
+    
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="a723f59c-d1be-44a1-b942-a27a15c862c6" />
+    
           <!-- Step 1 -->
           <div class="form-section active" id="step1">
             <div class="mb-3">
               <label for="name" class="form-label">Full Name</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                placeholder="Enter your name"
-                required
-              />
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required />
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="Enter your email"
-                required
-              />
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
             </div>
             <div class="mb-3">
               <label for="mobile" class="form-label">Mobile Number</label>
-              <input
-                type="tel"
-                class="form-control"
-                id="mobile"
-                placeholder="Enter your mobile number"
-                pattern="^\d{10}$"
-                required
-              />
+              <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number" pattern="^\d{10}$" required />
             </div>
           </div>
-
+    
           <!-- Step 2 -->
           <div class="form-section" id="step2">
-            <div class="mb-3">
-              <label for="loanAmount" class="form-label">Loan Amount</label>
-              <input
-                type="number"
-                class="form-control"
-                id="loanAmount"
-                placeholder="Enter loan amount"
-                required
-              />
+            <!-- Two-column layout for second page -->
+            <div class="form-row">
+              <div class="col mb-3">
+                <label for="panNumber" class="form-label">PAN Number</label>
+                <input type="text" class="form-control" id="panNumber" name="panNumber" placeholder="Enter your PAN number" required />
+              </div>
+              <div class="col mb-3">
+                <label for="dob" class="form-label">Date of Birth</label>
+                <input type="date" class="form-control" id="dob" name="dob" required />
+              </div>
             </div>
-            <div class="mb-3">
-              <label for="loanPurpose" class="form-label"
-                >Purpose of Loan</label
-              >
-              <input
-                type="text"
-                class="form-control"
-                id="loanPurpose"
-                placeholder="Enter purpose of the loan"
-                required
-              />
+    
+            <div class="form-row">
+              <div class="col mb-3">
+                <label for="companyName" class="form-label">Company Name</label>
+                <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Enter your company name" required />
+              </div>
+              <div class="col mb-3">
+                <label for="salary" class="form-label">Salary</label>
+                <input type="number" class="form-control" id="salary" name="salary" placeholder="Enter your salary" required />
+              </div>
+            </div>
+    
+            <div class="form-row">
+              <div class="col mb-3">
+                <label for="location" class="form-label">Location</label>
+                <input type="text" class="form-control" id="location" name="location" placeholder="Enter your location" required />
+              </div>
+              <div class="col mb-3">
+                <label for="loanRepayment" class="form-label">How Much Loan Can You Pay Monthly?</label>
+                <input type="number" class="form-control" id="loanRepayment" name="loanRepayment" placeholder="Enter how much loan you can repay monthly" required />
+              </div>
+            </div>
+    
+            <div class="form-row">
+              <div class="col mb-3">
+                <label for="loanFor" class="form-label">Loan For</label>
+                <input type="text" class="form-control" id="loanFor" name="loanFor" placeholder="What is the loan for?" required />
+              </div>
+              <div class="col mb-3">
+                <label for="currentAddress" class="form-label">Current Address</label>
+                <input type="text" class="form-control" id="currentAddress" name="currentAddress" placeholder="Enter your current address" required />
+              </div>
             </div>
           </div>
-
+    
           <!-- Navigation Buttons -->
           <div class="d-flex justify-content-between mt-4">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              id="prevBtn"
-              disabled
-            >
-              Previous
-            </button>
-            <button type="button" class="btn btn-primary" id="nextBtn">
-              Next
-            </button>
+            <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+            <button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+            <!-- Final Submit Button -->
+            <button type="submit" class="btn btn-primary d-none" id="submitBtn">Submit</button>
           </div>
         </form>
       </div>
     </section>
+    
+    
     <!-- Loan Form Section End -->
 
+
+
+    
+    <!--footer start-->
+    <section class="foot">
+      <footer>
+        <div class="container footer-container">
+            <div class="col-3">
+                <img src="/Images/png logo.png" alt="">
+                <br>
+                <div class="social">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></i></a>
+
+                </div>
+                <br>
+                <span class="address">Address:B-14/15 First Floor F05,Udhyog Marg, Block B, Sector 1, Noida, Uttar Pradesh 201301
+                </span>
+            </div>
+            <div class="col-3">
+                <h6>About</h6>
+                <p>
+                  Paisa4You provides personalized financial solutions, including loans for individuals and businesses. We focus on trust, flexibility, and customer satisfaction, ensuring a smooth financing experience.
+                    <br>
+                    <br>
+                    Our expert team is committed to delivering personalized services for a smooth and hassle-free experience.
+                </p>
+            </div>
+            <div class="col-3">
+              <h6>Get Help</h6>
+              <a href="https://wa.me/7017249349?text=I%20am%20interested" target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i> 7017249349
+              </a>
+          </div>
+          
+          
+          <div class="col-3">
+            <h6>Contact</h6>
+            <a href="mailto:Ashish.sengar@paisa4you.com">ashish.sengar@paisa4you.com</a>
+        </div>
+        </div>
+        <div class="copyright">
+            Copyright &#169; 2024 | Paisa4You 
+        </div>
+    </footer>
+    
+
+
+
+    </section>
+    <!--footer end-->
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <script src="/js/applylone.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/popup.js"></script>
   </body>
 </html>
