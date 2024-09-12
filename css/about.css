@@ -38,20 +38,22 @@ body {
 
 .team-members {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+  padding: 10px;
 }
 
 .team-member {
   width: 30%;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 .team-member img {
   width: 100%;
-  height: auto;
+  height: 250px;
   border-radius: 50%;
+  row-gap: 10px;
   margin-bottom: 15px;
 }
 
