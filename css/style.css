@@ -1,6 +1,7 @@
 .navbar {
   background-color: aliceblue;
   border-bottom: 1px solid black;
+  width: 100vw;
 }
 
 html {
@@ -28,6 +29,7 @@ html {
 }
 /* Hero Section */
 .hero-section {
+  margin-top: 50px;
   background-image: url("/Images/hero-image.jpg");
   background-size: cover;
   background-position: center;
@@ -45,6 +47,7 @@ html {
 .navbar1 {
   position: relative; /* Ensure navbar is positioned relative */
   z-index: 10;
+  position: fixed;
 }
 .hero-section h1 {
   font-size: 2em;
@@ -62,33 +65,22 @@ html {
   border-radius: 5px;
 }
 
-/* Emergency Panel Section */
+/* General Styling */
 #emrgancy_panel {
-  display: flex;
-  justify-content: center;
-  justify-content: space-evenly;
-  background-color: #f6efee;
-  padding-top: 10px;
+  padding: 20px 0;
 }
 
-#emrgancy_panel .row {
-  justify-content: center; /* Center items horizontally */
+.text-center {
+  text-align: center;
 }
-#emrgancy_panel .text-center a {
+
+.icon-style {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Add hover effect for links */
+#emrgancy_panel a:hover {
+  color: #007bff; /* Customize to your theme */
   text-decoration: none;
-
-  color: #333;
-  font-weight: bold;
-  display: block;
-}
-#emrgancy_panel .text-center a {
-  font-size: 1.5rem;
-  justify-content: space-around;
-}
-#emrgancy_panel .text-center i {
-  font-size: 1.5rem;
-}
-#emrgancy_panel .text-center p {
-  margin: 0;
-  font-size: 1rem;
 }
